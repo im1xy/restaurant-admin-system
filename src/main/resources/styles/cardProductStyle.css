@@ -1,0 +1,18 @@
+.card{
+    -fx-background-color: linear-gradient(to bottom right, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 50%, rgba(0,212,255,1) 100%);
+    -fx-background-radius: 10px;
+
+
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5,0,0,0);
+}
+
+.card .label {
+    -fx-text-fill: #fff;
+}
+
+.card .checkbox .label {
+    -fx-text-fill: #fff;
+}

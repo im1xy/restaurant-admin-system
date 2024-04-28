@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.window.system.SystemController">
+   <children>
+      <AnchorPane fx:id="mainForm" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="255.0" layoutY="78.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="600.0" prefWidth="222.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="11.0" layoutY="161.0" prefHeight="600.0" prefWidth="222.0" styleClass="nav-form" stylesheets="@../../styles/mainFormStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="11.0" layoutY="37.0" prefHeight="87.0" prefWidth="222.0" styleClass="header" stylesheets="@../../styles/mainFormStyle.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="33.0" prefHeight="87.33333333333333" prefWidth="222.0" text="Restaurant Admin Panel" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <Label fx:id="usernameLabel" layoutX="95.0" layoutY="103.0" prefHeight="17.0" prefWidth="126.0" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="dashboardButton" layoutX="6.0" layoutY="200.0" mnemonicParsing="false" onAction="#loadDashboard" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@../../styles/mainFormStyle.css" text="Dashboard" />
+                              <Button fx:id="menuButton" layoutX="6.0" layoutY="250.0" mnemonicParsing="false" onAction="#loadMenuPreview" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@../../styles/mainFormStyle.css" text="Menu" />
+                              <Button fx:id="updateMenuButton" layoutX="6.0" layoutY="300.0" mnemonicParsing="false" onAction="#loadMenuUpdate" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@../../styles/mainFormStyle.css" text="Update Menu" />
+                              <Button fx:id="inventoryButton" layoutX="6.0" layoutY="350.0" mnemonicParsing="false" onAction="#loadInventory" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@../../styles/mainFormStyle.css" text="Inventory" />
+                              <Button fx:id="ordersButton" layoutX="6.0" layoutY="400.0" mnemonicParsing="false" onAction="#loadOrders" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@../../styles/mainFormStyle.css" text="Orders" />
+                              <Button fx:id="logoutButton" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="554.0" mnemonicParsing="false" onAction="#logout" prefHeight="38.0" prefWidth="200.0" stylesheets="@../../styles/mainFormStyle.css" text="Logout" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="14.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="logout" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </Button>
+                              <ImageView fitHeight="93.0" fitWidth="123.0" layoutX="65.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="60.0">
+                                 <image>
+                                    <Image url="@../../images/restaurant.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane fx:id="panelsPanel" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

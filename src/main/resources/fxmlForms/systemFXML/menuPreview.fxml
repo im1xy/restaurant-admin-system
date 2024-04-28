@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="menuPreviewForm" prefHeight="567.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.panel.menu.menuPreview.MenuPreviewController" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <AnchorPane layoutX="72.0" layoutY="200.0" prefHeight="488.0" prefWidth="729.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <children>
+            <AnchorPane layoutX="15.0" layoutY="14.0" prefHeight="567.0" prefWidth="800.0" stylesheets="@../../styles/mainFormStyle.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                <styleClass>
+                    <String fx:value="white-bg" />
+                    <String fx:value="radius" />
+                    <String fx:value="shadow" />
+                </styleClass>
+            <children>
+               <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="130.0" layoutY="46.0" prefHeight="338.0" prefWidth="771.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                  <content>
+                     <GridPane fx:id="menuGridPane" alignment="TOP_CENTER" gridLinesVisible="true" vgap="5.0">
+                       <columnConstraints>
+                           <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                       </columnConstraints>
+                     </GridPane>
+                  </content></ScrollPane>
+            </children>
+            </AnchorPane>
+        </children>
+    </AnchorPane>
+</AnchorPane>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="menuUpdateForm" prefHeight="567.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.panel.menu.menuUpdate.MenuUpdateController" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <AnchorPane layoutX="72.0" layoutY="200.0" prefHeight="488.0" prefWidth="729.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <children>
+            <AnchorPane layoutX="15.0" layoutY="14.0" prefHeight="286.0" prefWidth="849.0" stylesheets="@../../styles/mainFormStyle.css" AnchorPane.bottomAnchor="215.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                <styleClass>
+                    <String fx:value="white-bg" />
+                    <String fx:value="radius" />
+                    <String fx:value="shadow" />
+                </styleClass>
+            <children>
+               <TableView fx:id="itemTable" layoutX="112.0" layoutY="37.0" onMouseClicked="#loadItemToControls" prefHeight="338.0" prefWidth="771.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                 <columns>
+                   <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+                   <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
+                     <TableColumn fx:id="typeColumn" prefWidth="75.0" text="Type" />
+                     <TableColumn fx:id="priceColumn" prefWidth="75.0" text="Price" />
+                     <TableColumn fx:id="imagePathColumn" prefWidth="75.0" text="Image Path" />
+                     <TableColumn fx:id="availabilityColumn" prefWidth="75.0" text="Is Available" />
+                 </columns>
+                  <columnResizePolicy>
+                     <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                  </columnResizePolicy>
+               </TableView>
+            </children>
+            </AnchorPane>
+            <AnchorPane fx:id="controlPanel" layoutX="15.0" layoutY="325.0" prefHeight="180.0" prefWidth="849.0" stylesheets="@../../styles/mainFormStyle.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0">
+                <styleClass>
+                    <String fx:value="white-bg" />
+                    <String fx:value="radius" />
+                    <String fx:value="shadow" />
+                </styleClass>
+                <children>
+                    <GridPane alignment="CENTER" hgap="5.0" layoutX="114.0" layoutY="26.0" prefHeight="261.3333333333333" prefWidth="849.0" vgap="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="NEVER" minWidth="10.0" prefWidth="175.0" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+                            <Label text="Product Name:">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <TextField fx:id="productNameInput" prefHeight="25.0" prefWidth="168.0" GridPane.columnIndex="1" />
+                            <Label text="Type:" GridPane.columnIndex="2">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <ComboBox fx:id="typeComboBox" prefHeight="25.0" prefWidth="168.0" promptText="Choose Type..." GridPane.columnIndex="3" />
+                            <TextField fx:id="priceInput" prefHeight="25.0" prefWidth="168.0" promptText="\$0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <ComboBox fx:id="statusComboBox" prefHeight="25.0" prefWidth="168.0" promptText="Choose Status..." GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                            <Label text="Price ($):" GridPane.rowIndex="1">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <Label text="Status" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                <font>
+                                    <Font size="14.0" />
+                                </font>
+                            </Label>
+                            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteSelectedItem" prefHeight="25.0" prefWidth="99.0" styleClass="btn" stylesheets="@../../styles/mainFormStyle.css" text="Delete" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addItem" prefHeight="25.0" prefWidth="99.0" styleClass="btn" stylesheets="@../../styles/mainFormStyle.css" text="Add" GridPane.rowIndex="2" />
+                            <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateSelectedItem" prefHeight="25.0" prefWidth="99.0" styleClass="btn" stylesheets="@../../styles/mainFormStyle.css" text="Update" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearControls" prefHeight="25.0" prefWidth="99.0" styleClass="btn" stylesheets="@../../styles/mainFormStyle.css" text="Clear" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                            <Button fx:id="importButton" mnemonicParsing="false" onAction="#importImage" prefHeight="25.0" prefWidth="99.0" styleClass="btn" stylesheets="@../../styles/mainFormStyle.css" text="Import" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                            <AnchorPane maxHeight="100.0" maxWidth="100.0" prefHeight="73.0" prefWidth="100.0" stylesheets="@../../styles/mainFormStyle.css" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                </styleClass>
+                                <children>
+                                    <VBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                        <children>
+                                            <ImageView fx:id="imageView" fitHeight="100.0" fitWidth="100.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
+                                        </children>
+                                    </VBox>
+                                </children>
+                            </AnchorPane>
+                        </children>
+                    </GridPane>
+                </children>
+            </AnchorPane>
+            <Separator layoutX="14.0" layoutY="360.0" prefHeight="5.0" prefWidth="852.0" AnchorPane.bottomAnchor="201.66666666666669" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" />
+        </children>
+    </AnchorPane>
+</AnchorPane>
