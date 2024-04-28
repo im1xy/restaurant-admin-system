@@ -29,18 +29,13 @@ public class LoginController implements Initializable {
     }
 
     public void login() {
-        //TODO remove check
-        //if (!isInputValid()) {
-        //    showErrorAlert();
-        //    return;
-        //}
+        if (!isInputValid()) {
+            showErrorAlert();
+            return;
+        }
 
         String username = usernameInput.getText();
         String password = passwordInput.getText();
-
-        //TODO remove credentials
-        username = "saralee";
-        password = "zxcvb";
 
         if (LoginSQL.isDataInDatabase(username, password)) {
             loginSuccess();
