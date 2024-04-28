@@ -38,5 +38,5 @@ build/
 ### Mac OS ###
 .DS_Store
 
-./logINFO.txt
-./src/main/resources/properties
+/logINFO.txt
+/src/main/resources/properties/*
